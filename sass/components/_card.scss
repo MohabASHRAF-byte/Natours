@@ -1,0 +1,189 @@
+.card {
+  height: 60rem;
+  &__side {
+    height: 60rem;
+    position: relative;
+    padding: 5rem;
+    transition: all 0.8s;
+    &--front {
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+      height: 60rem;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      transition: all 0.8s;
+      box-shadow: 0 1rem 4rem $color-black;
+    }
+    &--back {
+      -moz-backface-visibility: hidden;
+      backface-visibility: hidden;
+      height: 60rem;
+      width: 100%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: blue;
+      transform: rotateY(180deg);
+      transition: all 1s;
+      box-shadow: 0 1rem 2rem $color-black;
+      &-1 {
+        background-image: linear-gradient(
+          to bottom right,
+          $color-orange-light,
+          $color-orange-dark
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to bottom right,
+          $color-blue-light,
+          $color-blue-dark
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to bottom right,
+          $color-primary-light,
+          $color-primary-dark
+        );
+      }
+    }
+  }
+  // front side styling
+  &__picture {
+    height: 30rem;
+    width: 100%;
+    background-blend-mode: screen;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    &-1 {
+      background-image: linear-gradient(
+          to bottom right,
+          (rgba($color-orange-light, 1)),
+          rgba($color-orange-dark, 1)
+        ),
+        url("../img/nat-5.jpg");
+      background-size: cover;
+    }
+    &-2 {
+      background-image: linear-gradient(
+          to bottom right,
+          (rgba($color-blue-light, 1)),
+          rgba($color-blue-dark, 1)
+        ),
+        url("../img/nat-6.jpg");
+      background-size: cover;
+    }
+    &-3 {
+      background-image: linear-gradient(
+          to bottom right,
+          (rgba($color-primary-light, 1)),
+          rgba($color-primary-dark, 1)
+        ),
+        url("../img/nat-7.jpg");
+      background-size: cover;
+    }
+  }
+  &__heading {
+    margin-right: 1rem;
+    position: absolute;
+    left: 30%;
+    top: 25%;
+    text-transform: uppercase;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    font-size: 3.5rem;
+    text-align: right;
+    color: $color-white;
+    font-weight: 300;
+    &-1 {
+      padding: 1rem 1.5rem;
+      background-image: linear-gradient(
+        to bottom right,
+        (rgba($color-orange-light, 0.85)),
+        rgba($color-orange-dark, 0.85)
+      );
+    }
+    &-2 {
+      padding: 1rem 1.5rem;
+      background-image: linear-gradient(
+        to bottom right,
+        (rgba($color-blue-light, 0.85)),
+        rgba($color-blue-dark, 0.85)
+      );
+    }
+    &-3 {
+      padding: 1rem 1.5rem;
+      background-image: linear-gradient(
+        to bottom right,
+        (rgba($color-primary-light, 0.85)),
+        rgba($color-primary-dark, 0.85)
+      );
+    }
+  }
+  &__details {
+    ul {
+      text-align: center;
+      list-style: none;
+      margin: 3rem auto;
+
+      li {
+        line-height: 1.7;
+        width: 80%;
+        font-weight: 400;
+        display: inline-block;
+        color: $color-gray;
+        padding: 1rem 0;
+        &:not(:last-child) {
+          border-bottom: 0.2rem solid $color-gray-light-2;
+        }
+      }
+    }
+  }
+  // back side styling
+  &__cta {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: $color-white;
+    &--only {
+      font-size: 3rem;
+    }
+    &--price {
+      font-size: 7rem;
+      margin-top: 2rem;
+      margin-bottom: 8rem;
+      font-weight: 200;
+    }
+    &--btn {
+      backface-visibility: hidden;
+      display: inline-block;
+      text-transform: uppercase;
+      font-size: 2.9rem;
+      width: 70%;
+      padding: 2rem;
+      ::after {
+        background-color: transparent;
+        backface-visibility: hidden;
+      }
+    }
+  }
+  &__btn{
+    // width: 20%;
+    display: inline-block;
+    // height: 10rem;
+    font-size: 3rem;
+    padding :1rem 10rem;    
+  }
+  &:hover {
+    .card__side--front {
+      transform: rotateY(-180deg);
+    }
+    .card__side--back {
+      transform: rotateY(0deg);
+    }
+  }
+}

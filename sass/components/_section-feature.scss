@@ -6,7 +6,8 @@
       ),
       url("../../img/nat-4.jpg");
   
-    padding: 20rem 0;
+    padding: 20rem 5rem;
+    margin-top: -12rem;
     transform: skewY(-7deg);
     & > * {
       transform: skewY(7deg);
