@@ -10,6 +10,22 @@
     <title>Natours | Exciting tours for adventurous people</title>
   </head>
   <body>
+    <div class="navigation">
+      <input type="checkbox" class="navigation_checkbox" id="toggle-nav">
+      <label for="toggle-nav" class="navigation_button">
+        <span class="navigation_button-icon"></span>
+      </label>
+      <div class="navigation_backgound">&nbsp;</div>
+      <nav class="navigation_nav">
+        <ul class="navigation_list">
+          <li class="navigation_item" ><a href="#" class="navigation_link">01 &nbsp;&nbsp;About Natours</a></li>
+          <li class="navigation_item"><a href="#" class="navigation_link">02 &nbsp;&nbsp;your benfits</a></li>
+          <li class="navigation_item"><a href="#" class="navigation_link">03 &nbsp;&nbsp;popular tours</a></li>
+          <li class="navigation_item"><a href="#" class="navigation_link">04 &nbsp;&nbsp;stories</a></li>
+          <li class="navigation_item"><a href="#" class="navigation_link">01 &nbsp;&nbsp;book now</a></li>
+        </ul>
+      </nav>
+    </div>
     <header class="header">
       <div class="header__logo-box">
         <img src="img/logo-white.png" alt="little logo" class="header__logo-box--logo">
@@ -77,7 +93,7 @@
           </div>
         </div>
       </section>
-      <section class="tours-section u-text-align-center">
+      <section class="tours-section u-text-align-center" id="tours-section">
         <h2 class="tours__title secondery-title u-margin-bottom-large"> Most popular tours </h2>
         <div class="row u-margin-bottom-large">
           <div class="col-1-of-3">
@@ -102,7 +118,7 @@
                   <div class="card__cta">
                     <div class="card__cta--only"> only</div>
                     <div class="card__cta--price">270$</div>
-                    <div class="btn btn--white  card__cta--btn"> book now</div>
+                    <a class="btn btn--white  card__cta--btn" href="#popup" > book now</a>
                   </div>
                 </div>
               </div>
@@ -130,7 +146,7 @@
                   <div class="card__cta">
                     <div class="card__cta--only"> only</div>
                     <div class="card__cta--price">270$</div>
-                    <div class="btn btn--white  card__cta--btn"> book now</div>
+                    <a class="btn btn--white  card__cta--btn" href="#popup" > book now</a>
                   </div>
                 </div>
               </div>
@@ -158,7 +174,7 @@
                   <div class="card__cta">
                     <div class="card__cta--only"> only</div>
                     <div class="card__cta--price">270$</div>
-                    <div class="btn btn--white  card__cta--btn"> book now</div>
+                    <a class="btn btn--white  card__cta--btn" href="#popup" > book now</a>
                   </div>
                 </div>
               </div>
@@ -200,7 +216,7 @@
       <section class="booking-section">
         <div class="booking-section__content">
           <div class="book">
-            <h2 class="secondery-title u-margin-bottom-large"> start booking now </h2>
+            <h2 class="secondery-title u-margin-bottom-mid form_title"> start booking now </h2>
             <form action="#" class="form">
               <div class="form__group">
                 <input type="text" name="" id="name" class="form__group-input" placeholder="Full name" required>
@@ -225,6 +241,53 @@
         </div>
       </section>
     </main>
+    <footer class="main-footer">
+    <footer class="main-footer">
+      <div class="main-footer__logo">
+        <img src="img/logo-green-2x.png" alt="" class="main-footer__logo-pic">
+      </div>
+      <div class="main-footer__content">
+        <div class="main-footer__content-col1">
+          <ul class="companyInfo">
+            <li>company</li>
+            <li>contect us</li>
+            <li>about</li>
+            <li>policy</li>
+            <li>careers</li>
+          </ul>
+        </div>
+        <div class="main-footer__content-col2">
+          <p>
+            Built by
+            <a> JONAS SCHMEDTMANN</a>
+             for his online course
+             <a> ADVANCED CSS AND SASS.</a>
+              Copyright © by Jonas Schmedtmann.
+              You are 100% allowed to use this webpage 
+              for both personal and commercial use,
+              but NOT to claim it as your own design.
+              A credit to the original author, 
+              Jonas Schmedtmann, 
+              is of course highly appreciated!
+          </p>
+        </div>
+      </div>
+    </footer>
+    <div class="popup" id="popup">
+      <div class="popup_content">
+        <a href="#tours-section" class="popup_close">&times;</a>
+        <div class="popup_col1">
+          <img src="img/nat-8.jpg" alt="" class="popup_img">
+          <img src="img/nat-9.jpg" alt="" class="popup_img">
+        </div>
+        <div class="popup_col2">
+          <h2 class="secondery-title u-margin-bottom-mid">start booking now</h2>
+          <h3 class="tertiary-title u-margin-bottom-small">start booking now</h3>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis magni,Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus officiis id quibusdam, maiores sed fugit eius laborum quidem nulla a numquam veniam asperiores voluptates. Totam sequi enim dignissimos aspernatur doloribus. soluta culpa et, eius consequuntur minus provident ab vero deserunt, labore id quidem quo quae. Quas tenetur numquam laborum excepturi./p>
+          <div class="btn btn--green">strat now</div>
+        </div>
+      </div>
+    </div>  
   </body>
 </html>
 <!--  <section class="float-grid"><div class="row"><div class="col-1-of-2">col-1-of-2"</div><div class="col-1-of-2">col-1-of-2"</div></div><div class="row"><div class="col-1-of-3">col-1-of-3</div><div class="col-1-of-3">col-1-of-3</div><div class="col-1-of-3">col-1-of-3</div></div><div class="row"><div class="col-1-of-3">col-1-of-3</div><div class="col-2-of-3">col-2-of-3</div></div><div class="row"><div class="col-1-of-4">col-1-of-4</div><div class="col-1-of-4">col-1-of-4</div><div class="col-1-of-4">col-1-of-4</div><div class="col-1-of-4">col-1-of-4</div></div><div class="row"><div class="col-1-of-4">col-1-of-4</div><div class="col-1-of-4">col-1-of-4</div><div class="col-2-of-4">col-2-of-4</div></div><div class="row"><div class="col-1-of-4">col-1-of-4</div><div class="col-3-of-4">col-3-of-4</div></div></section> -->
