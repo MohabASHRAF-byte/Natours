@@ -97,6 +97,10 @@
   &_list {
     list-style: none;
     @include centerWithTransform;
+    @include respond(iphone) {
+      display: block;
+      width: 100%;
+    }
   }
   &_item {
     text-align: center;
@@ -110,6 +114,9 @@
       text-decoration: none;
       text-transform: uppercase;
       font-size: 3rem;
+      @include respond(iphone) {
+        font-size: 2rem;
+      }
       font-weight: 300;
       color: white;
       background-image: linear-gradient(

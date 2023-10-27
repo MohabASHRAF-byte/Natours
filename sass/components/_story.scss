@@ -36,6 +36,10 @@
     shape-outside: circle();
     clip-path: circle();
     transform: translateX(-1.5rem) skewX(12deg) scale(0.9) translateY(-1rem);
+    @include respond(iphone) {
+      display: inline-block;
+      left: 4%;
+    }
     @include respond(phone) {
       float: none;
       display: inline-block;
