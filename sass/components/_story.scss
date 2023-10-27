@@ -1,71 +1,90 @@
 .story {
-    margin: 0 auto;
-    width: 70%;
-    background-color: rgba($color-white, .8);
-    padding: 6.5rem;
-    margin-bottom: 5rem;
-    transform: skewX(-12deg);
-    text-align: left;
-    & > * {
-      transform: skewX(12deg);
-    }
-    &__title{
-font-size: 2.5rem;
-margin-bottom: 1rem;
-    }
-    &__description{
-        font-size: 2rem;
-        color: $color-gray;
-    }
-    &__shape {
-      position: relative;
-      float: left;
-      height: 15rem;
-      width: 15rem;
-      shape-outside: circle();
-      clip-path: circle();
-      transform: translateX(-1.5rem) skewX(12deg) scale(0.9) translateY(-1rem);
-      &-img {
-        height: 100%;
-        position: absolute;
-        left: -4rem;
-        transform: scale(1.4);
-        transition: all 0.8s;
-        backface-visibility: hidden;
-      }
-      figcaption {
-        position: absolute;
-        transform: translate(-50%, -50%);
-        left: 50%;
-        top: 110%;
-        color: $color-white;
-        font-size: 3rem;
-        transition: all 0.8s;
-        backface-visibility: hidden;
-      }
-    }
-    &__btn {
-      margin-top: -10rem;
-      color: $color-primary;
-      border-bottom: 0.05rem dotted $color-primary;
-      display: inline-block;
-      text-align: center;
-      padding: 1rem;
-      padding-bottom: 0.3rem;
-      text-transform: uppercase;
-      font-size: 3rem;
-      font-weight: 500;
-      &:hover {
-        border-width: 0;
-      }
-    }   
-    &:hover &__shape-img {
-      transform: scale(1);
-      filter: blur(4px) brightness(80%);
-    }
-    &:hover &__shape figcaption {
-      top: 50%;
-      transform: translate(-50%, -50%);
+  margin: 0 auto;
+  background-color: rgba($color-white, 0.8);
+  padding: 6rem 4rem;
+  margin-bottom: 5rem;
+  font-size: 4rem;
+  transform: skewX(-12deg);
+
+  width: 90%;
+  text-align: center;
+  @include respond(iphone) {
+    padding: 6rem 2rem;
+  }
+  @include respond(phone) {
+    transform: skewX(0deg);
+  }
+  & > * {
+    transform: skewX(12deg);
+    @include respond(phone) {
+      transform: skewX(0deg);
     }
   }
-  
+  &__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  &__description {
+    font-size: 1.6rem;
+    color: $color-gray;
+  }
+  &__shape {
+    position: relative;
+    float: left;
+    height: 15rem;
+    width: 15rem;
+    shape-outside: circle();
+    clip-path: circle();
+    transform: translateX(-1.5rem) skewX(12deg) scale(0.9) translateY(-1rem);
+    @include respond(phone) {
+      float: none;
+      display: inline-block;
+      height: 15rem;
+      width: 15rem;
+    }
+    @include respond(phone) {
+      transform: translateX(-1.5rem) skewX(0) scale(0.9) translateY(-1rem);
+    }
+    &-img {
+      height: 100%;
+      position: absolute;
+      left: -4rem;
+      transform: scale(1.4);
+      transition: all 0.8s;
+      backface-visibility: hidden;
+    }
+    figcaption {
+      position: absolute;
+      transform: translate(-50%, -50%);
+      left: 50%;
+      top: 110%;
+      color: $color-white;
+      font-size: 3rem;
+      transition: all 0.8s;
+      backface-visibility: hidden;
+    }
+  }
+  &__btn {
+    margin-top: -10rem;
+    color: $color-primary;
+    border-bottom: 0.05rem dotted $color-primary;
+    display: inline-block;
+    text-align: center;
+    padding: 1rem;
+    padding-bottom: 0.3rem;
+    text-transform: uppercase;
+    font-size: 3rem;
+    font-weight: 500;
+    &:hover {
+      border-width: 0;
+    }
+  }
+  &:hover &__shape-img {
+    transform: scale(1);
+    filter: blur(4px) brightness(80%);
+  }
+  &:hover &__shape figcaption {
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

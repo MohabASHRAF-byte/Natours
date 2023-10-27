@@ -1,0 +1,65 @@
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba($color-black, 0.9);
+
+  #tours-section:target #popup {
+    visibility: hidden;
+    opacity: 0;
+  }
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+  visibility: hidden;
+  opacity: 0;
+  &_content {
+    @include centerWithTransform;
+    width: 75%;
+    background-color: white;
+    border-radius: 3px;
+    display: table;
+  }
+  &_col1 {
+    width: 33.3333%;
+    float: left;
+    display: table-cell;
+  }
+  &_img {
+    display: block;
+    width: 100%;
+    background-size: cover;
+  }
+  &_col2 {
+    width: 66.666667%;
+    float: left;
+    padding: 2rem 5rem;
+    display: table-cell;
+    vertical-align: middle;
+    p {
+      color: $color-gray-3;
+      column-count: 2;
+      column-gap: 3rem;
+      hyphens: auto;
+      font-size: 1.4rem;
+      margin-bottom: 2rem;
+    }
+  }
+  &_close {
+    color: black;
+    font-size: 3rem;
+    background-color: transparent;
+    height: 5rem;
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 2.5rem;
+    text-decoration: none;
+    &:hover {
+      color: $color_primary;
+    }
+  }
+}

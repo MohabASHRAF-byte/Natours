@@ -1,13 +1,41 @@
-@mixin clearFix{
-    &::after{
-        content: "";
-        display: block;
-        clear: both;
-    }
+@mixin clearFix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
 }
-@mixin centerWithTransform{
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%,-50%);
+@mixin centerWithTransform {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin respond($break-point) {
+  @if $break-point == iphone {
+    @media (max-width: 420px) {
+      @content;
+    }
+  }
+  @if $break-point == phone {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+  @if $break-point == portTab {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if $break-point == landTab {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if $break-point == bigDisk {
+    @media (min-width: 1800px) {
+      @content;
+    }
+  }
 }

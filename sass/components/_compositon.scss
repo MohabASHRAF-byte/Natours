@@ -1,34 +1,74 @@
-.composition{
+.composition {
   position: relative;
- &_photo{
-     position: absolute;
-     width: 55%;
-     outline-offset: 1rem;
-     transition: all .2s;
-     box-shadow: 0rem 1rem 2rem rgba($color-black,0.5);
+  &_photo {
+    position: absolute;
+    width: 55%;
+    outline-offset: 1rem;
+    transition: all 0.2s;
+    box-shadow: 0rem 1rem 2rem rgba($color-black, 0.5);
 
-   &--p1{
-     left: 0;
-     top: -2rem;
-   }
-   &--p2{
-     right: 0;
-     top:2rem;
-   }
-   &--p3{
-     top: 12rem;
-     left: 20%;
-   }
-   &:hover{
-     z-index: 5;
-     transform: scale(1.05);
-     outline: 1.5rem solid $color-primary;
-     border-radius: 20px; 
-     box-shadow: 0rem 2rem 2rem rgba($color-black,0.5);
+    @include respond(portTab) {
+      float: left;
+      position: relative;
+      width: 33.3333%;
+      box-shadow: 0rem 1rem 2rem rgba($color-black, 0.2);
+    }
+    @include respond(iphone) {
+      float: none;
+      position: relative;
+      width: 100%;
+      box-shadow: 0rem 1rem 2rem rgba($color-black, 0.2);
+    }
+    &--p1 {
+      left: 0;
+      top: -2rem;
+      @include respond(portTab) {
+        top: 0;
+      }
+      @include respond(iphone) {
+        top: 0;
+        transform: scale(1);
+        z-index: 0;
+      }
+    }
+    &--p2 {
+      right: 0;
+      top: 2rem;
 
-   }
- }
-&:hover &_photo:not(:hover){
- transform: scale(.90);
-}
+      @include respond(portTab) {
+        top: -1rem;
+        transform: scale(1.4);
+        z-index: 5;
+      }
+      @include respond(iphone) {
+        top: 0;
+        transform: scale(1);
+        z-index: 0;
+      }
+    }
+    &--p3 {
+      top: 12rem;
+      left: 20%;
+      @include respond(portTab) {
+        top: 1rem;
+        left: 0;
+        transform: scale(1.2);
+      }
+      @include respond(iphone) {
+        top: 0;
+        transform: scale(1);
+        z-index: 0;
+      }
+    }
+    &:hover {
+      z-index: 5;
+      transform: scale(1.05);
+      outline: 1.5rem solid $color-primary;
+      border-radius: 20px;
+      box-shadow: 0rem 2rem 2rem rgba($color-black, 0.5);
+    }
+  }
+  &:hover &_photo:not(:hover) {
+    transform: scale(0.9);
+  }
 }

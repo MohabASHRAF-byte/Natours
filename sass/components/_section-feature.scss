@@ -1,39 +1,43 @@
 .section-feature {
-    background-image: linear-gradient(
-        to right,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8)
-      ),
-      url("../../img/nat-4.jpg");
-  
-    padding: 20rem 5rem;
-    margin-top: -12rem;
-    transform: skewY(-7deg);
-    & > * {
-      transform: skewY(7deg);
+  background-image: linear-gradient(
+      to right,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url("../../img/nat-4.jpg");
+
+  padding: 20rem 5rem;
+
+  margin-top: -12rem;
+  transform: skewY(-7deg);
+  & > * {
+    transform: skewY(7deg);
+  }
+  &__card {
+    // box-shadow: 0 .5rem 2rem $color-black;
+    padding: 5rem 0;
+    background-color: rgba($color-white, 0.8);
+    transition: all 0.3s;
+    @include respond(iphone) {
+      display: inline-block;
+      width: 80%;
     }
-    &__card {
-      // box-shadow: 0 .5rem 2rem $color-black;
-      padding: 5rem 0;
-      background-color: rgba($color-white, 0.8);
-      transition: all 0.3s;
-      &:hover {
-        transform: translateY(-0.8rem) scale(1.1);
-        box-shadow: 0 1rem 3rem $color-black;
-      }
-      &--icon {
-        display: inline-block;
-        // color: red;
-        font-size: 8rem;
-        background-image: linear-gradient(
-          to right,
-          $color-primary-light,
-          $color-primary-dark
-        );
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-      }
+    &:hover {
+      transform: translateY(-0.8rem) scale(1.1);
+      box-shadow: 0 1rem 3rem $color-black;
+    }
+    &--icon {
+      display: inline-block;
+      // color: red;
+      font-size: 8rem;
+      background-image: linear-gradient(
+        to right,
+        $color-primary-light,
+        $color-primary-dark
+      );
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
     }
   }
-  
+}

@@ -8,15 +8,18 @@
 @import "base/_typography.scss";
 @import "base/_utilities.scss";
 
-@import  "components/_compositon.scss";
-@import  "components/_section-feature.scss";
-@import  "components/_float-grid.scss";
-@import  "components/button";
-@import  "components/story";
-@import  "components/card";
-@import  "components/bg-video";
-@import  "components/form";
+@import "components/_compositon.scss";
+@import "components/_section-feature.scss";
+@import "components/_float-grid.scss";
+@import "components/button";
+@import "components/story";
+@import "components/card";
+@import "components/bg-video";
+@import "components/form";
+@import "components/popup";
 
 @import "layout/header";
+@import "layout/footer";
+@import "layout/navigation";
 
 @import "pages/home";

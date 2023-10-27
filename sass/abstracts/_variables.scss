@@ -1,22 +1,25 @@
 $color-primary: #55c57a;
 $color-primary-light: #7ed56f;
 $color-primary-dark: #28b485;
-$color-gray-light-2:#eee;
-$color-gray-light-1:#f7f7f7;
+$color-gray-light-2: #eee;
+$color-gray-light-1: #f7f7f7;
 $color-gray: #777;
 $color-gray-2: #999;
+$color-gray-3: #333;
 $color-white: #fff;
-$color-black:black;
+$color-black: black;
 
-$color-orange-light:#ffb900;
-$color-orange-dark:#ff7730;
+$color-orange-light: #ffb900;
+$color-orange-dark: #ff7730;
 
-$color-blue-light:#2998ff;
-$color-blue-dark:#5643fa;
+$color-blue-light: #2998ff;
+$color-blue-dark: #5643fa;
 
 // fonts
-$default-font:1.6rem;
+$default-font: 1.6rem;
 // grid
 $gutter-vertical: 8rem;
-$gutter-horizontal:8rem;
-$col-height:5rem;
+$gutter-vertical-small: 6rem;
+
+$gutter-horizontal: 8rem;
+$col-height: 5rem;

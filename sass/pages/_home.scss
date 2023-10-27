@@ -1,56 +1,114 @@
 .about-section {
-    // padding :15rem;
-  
-    margin-top: -20vh;
-    background-color: $color-gray-light-1;
-    padding: 25rem 15rem;
-    padding-top: 25rem;
-    padding-bottom: 50rem;
+  // padding :15rem;
+
+  margin-top: -20vh;
+  background-color: $color-gray-light-1;
+  padding: 25rem 15rem;
+  // padding-top: 25rem;
+  padding-bottom: 50rem;
+  @include respond(portTab) {
+    padding: 25rem 5rem;
   }
-  
-  .about-content {
-    text-align: left;
-    &:not(:first-child) {
-      margin-top: 2rem;
-    }
-    padding: 0 10rem;
+}
+
+.about-content {
+  text-align: left;
+  &:not(:first-child) {
+    margin-top: 2rem;
   }
-  .tours-section {
-    background-color: $color-gray-light-1;
-    text-align: center;
-    padding: 25rem 0;
-    margin: -10rem 0;
+  padding: 0;
+}
+.tours-section {
+  background-color: $color-gray-light-1;
+  text-align: center;
+  padding: 25rem 4rem;
+  @include respond(portTab) {
+    padding: 20rem 0rem;
   }
-  .stroies-section {
-    margin-top: 5rem;
-    padding: 20rem;
-    position: relative;
-    overflow: hidden;
+  @include respond(iphone) {
+    padding: 15rem 0rem;
   }
-  .stories-title {
-    width: 100%;
-    font-size: 6rem;
+  margin: -10rem 0;
+}
+.section-feature {
+  @include respond(iphone) {
+    padding: 10rem 2rem;
   }
-  .booking-section {
-    padding: 15rem 20rem;
-    background-image: linear-gradient(
-      to bottom right,
-      $color-primary-light,
-      $color-primary-dark
-    );
+  @include respond(portTab) {
+    padding: 8rem 0rem;
   }
-  .booking-section__content {
-    // height should be removed
-    height: 70rem;
+}
+.stroies-section {
+  margin-top: 5rem;
+  padding: 20rem;
+
+  @include respond(portTab) {
+    padding: 10rem;
+  }
+  @include respond(iphone) {
+    padding: 1rem;
+  }
+  position: relative;
+  overflow: hidden;
+}
+.stories-title {
+  width: 100%;
+  font-size: 4rem;
+  @include respond(iphone) {
+    font-size: 3rem;
+    padding-top: 4rem;
+  }
+}
+.booking-section {
+  padding: 15rem 7rem;
+  background-image: linear-gradient(
+    to bottom right,
+    $color-primary-light,
+    $color-primary-dark
+  );
+  @include respond(portTab) {
+    padding: 10rem 7rem;
+  }
+  @include respond(iphone) {
+    padding: 5rem 3rem;
+  }
+}
+.booking-section__content {
+  // height should be removed
+  // height: 55rem;
+  background-image: linear-gradient(
+      105deg,
+      rgba(#fff, 0.9) 50%,
+      transparent 50%
+    ),
+    url("../img/nat-10.jpg");
+  @include respond(portTab) {
     background-image: linear-gradient(
         105deg,
-        rgba(#fff, 0.9) 50%,
-        transparent 50%
+        rgba(#fff, 0.9) 65%,
+        transparent 65%
       ),
       url("../img/nat-10.jpg");
   }
-  .book {
-    padding: 5rem;
-    width: 50%;
+  @include respond(phone) {
+    background-image: linear-gradient(
+        105deg,
+        rgba(#fff, 0.9) 100%,
+        transparent 100%
+      ),
+      url("../img/nat-10.jpg");
+    text-align: center;
   }
-  
+}
+.book {
+  padding: 5rem;
+  width: 50%;
+  @include respond(portTab) {
+    width: 90%;
+    padding: 3rem 2rem;
+  }
+  @include respond(iphone) {
+    width: 100%;
+    padding: 3rem 1rem;
+  }
+}
